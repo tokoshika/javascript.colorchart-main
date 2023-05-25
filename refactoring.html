@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refactoring</title>
+  </head>
+  <body id="body">
+    <header>
+      <div class="header" style="background-color: black">
+        <div style="background-color: red">red</div>
+        <div style="background-color: blue">blue</div>
+        <div style="background-color: yellow">yellow</div>
+        <div style="background-color: green">green</div>
+        <div style="background-color: pink">pink</div>
+        <div style="background-color: orange">orange</div>
+        <div style="background-color: orchid">orchid</div>
+        <div style="background-color: lightblue">lightblue</div>
+        <div style="background-color: greenyellow">greenyellow</div>
+        <div style="background-color: tomato">tomato</div>
+      </div>
+    </header>
+
+    <div class="main" style="background-color: black">
+      <!-- フォントカラーのチェンジボタン作成 -->
+      <div style="color: white">
+        <label id="fontColor" for="head">Select Font Color</label>
+        <input
+          class="btn"
+          type="color"
+          id="inputFont"
+          name="head"
+          value="#e66465"
+        />
+        <button class="btn" id="selectFont">Set This Color</button>
+        <div id="discribe">
+          <p>Your selected color!</p>
+          <p>Let change bg-color!</p>
+        </div>
+      </div>
+      <!-- 背景カラーのチェンジボタン作成 -->
+      <div style="color: white">
+        <label id="fontLabel" for="head">Select BG Color</label>
+        <input
+          class="btn"
+          type="color"
+          id="inputBack"
+          name="head"
+          value="#e66465"
+        />
+        <button class="btn" id="selectBack">Set This Color</button>
+      </div>
+
+      <div>
+        <div style="background-color: red">red</div>
+        <div style="background-color: blue">blue</div>
+        <div style="background-color: yellow">yellow</div>
+        <div style="background-color: green">green</div>
+        <div style="background-color: pink">pink</div>
+      </div>
+      <div>
+        <div style="background-color: orange">orange</div>
+        <div style="background-color: orchid">orchid</div>
+        <div style="background-color: lightblue">lightblue</div>
+        <div style="background-color: greenyellow">greenyellow</div>
+        <div style="background-color: tomato">tomato</div>
+      </div>
+      <div>
+        <div style="background-color: teal">teal</div>
+        <div style="background-color: darkslategray">darkslategray</div>
+        <div style="background-color: darkgreen">darkgreen</div>
+        <div style="background-color: tan">tan</div>
+        <div style="background-color: whitesmoke">whitesmoke</div>
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    width: 100%;
+    height: 120px;
+    line-height: 2.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header div {
+    margin-top: 2.5rem;
+    height: 40px;
+    width: 130px;
+    border-radius: 2px;
+  }
+
+  .main {
+    display: flex;
+    padding-top: 1rem;
+    /* text-align: center; */
+    /* justify-content: center; */
+    height: 85vh;
+  }
+
+  .main div {
+    /* ここはマージン0オートが有効だった */
+    margin: 0 auto;
+    /* margin-top: 1rem; */
+    text-align: center;
+    line-height: 2.5rem;
+    height: 40px;
+    width: 200px;
+    border-radius: 4px;
+  }
+
+  .btn {
+    height: 40px;
+    width: 200px;
+  }
+</style>
+<script>
+  const header = document.querySelector(".header");
+  const body = document.getElementById("body");
+  const div = document.querySelector(".header");
+  const mainDiv = document.querySelector(".main");
+  const colorBtn = document.getElementById("colorBtn");
+  const inputFont = document.getElementById("inputFont");
+  const inputBack = document.getElementById("inputBack");
+  const select = document.getElementById("select-color");
+  const selectFont = document.getElementById("selectFont");
+  const selectBack = document.getElementById("selectBack");
+  const discribe = document.getElementById("discribe");
+
+  div.addEventListener("click", (e) => {
+    const color = e.target.textContent;
+    // console.log(color);
+    if (e.target.textContent === color) {
+      header.style.background = color;
+      console.log(body);
+    }
+  });
+
+  mainDiv.addEventListener("click", (e) => {
+    const color = e.target.textContent;
+    // console.log(color);
+    if (e.target.textContent === color) {
+      mainDiv.style.background = color;
+    }
+  });
+
+  selectFont.addEventListener("click", () => {
+    console.log(inputFont.value);
+    body.style.color = inputFont.value;
+    discribe.textContent = inputFont.value;
+    discribe.style.color = inputFont.value;
+  });
+
+  selectBack.addEventListener("click", () => {
+    mainDiv.style.background = inputBack.value;
+    console.log(inputBack.value);
+  });
+</script>

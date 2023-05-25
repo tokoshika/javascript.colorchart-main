@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nth-child使い方</title>
+  </head>
+  <body>
+    <div>
+      <p>nth-child(even)</p>
+      <ul class="even" type="square">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div>
+      <p>nth-child(odd)</p>
+      <ul class="odd" type="square">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+
+    <div>
+      <p>nth-child(3)</p>
+      <ul class="select3" type="square">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+
+    <div>
+      <p>nth-child(closs)</p>
+      <ul class="closs" type="square">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+  </body>
+</html>
+<style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+  .even :nth-child(even) {
+    background-color: tomato;
+    color: white;
+  }
+  .odd :nth-child(odd) {
+    background-color: tomato;
+    color: white;
+  }
+
+  .select3 :nth-child(3) {
+    background-color: tomato;
+    color: white;
+  }
+  .odd :nth-child(odd) {
+    background-color: tomato;
+    color: white;
+  }
+
+  .closs :nth-child(odd) {
+    background-color: tomato;
+    color: white;
+  }
+  .closs :nth-child(even) {
+    background-color: tomato;
+    color: white;
+  }
+</style>

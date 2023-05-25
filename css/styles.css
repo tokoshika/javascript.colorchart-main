@@ -1,0 +1,329 @@
+body {
+  
+  margin: 0;
+  font-family: Verdana,sans-serif;
+  background-color: rgb(121, 153, 196);
+}
+
+header {
+  display: flex;
+  padding: 0 16px;
+  background-color: aquamarine;
+}
+
+/* ヘッダーの高さはline-height */
+header h1 {
+  margin: 0;
+  padding-right: 10px;
+  font-size: 32px;
+  line-height: 80px;
+}
+
+/* ヘッダーのカラーボタン */
+
+
+
+.sp-menu {
+  margin-left: auto;
+}
+
+.sp-menu #open {
+  font-size: 32px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+/* ヘッダー部分 */
+.overlay {
+  text-align: center;
+  padding: 64px;
+  opacity:0;
+  pointer-events: none;
+  position: fixed;
+  transition:opacity .6s;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background:rgba(225,225,225,0.95) 
+  
+  
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+  
+}
+
+.overlay ul {
+  list-style: none;
+}
+
+.overlay li {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translate(16px);
+  transition: opacity .3s; transform: .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+/* mainの中身は均等横並び */
+main { 
+  padding: 2px 16px 0 16px;
+  text-align: center;  
+  display: flex;
+  color:rgba(0, 0, 0, 0.918);
+}
+
+.mainH{
+  padding: 2px 16px 0 16px;
+  text-align: center;  
+  display: contents;   
+  
+}
+
+
+/* フレックスボックスの指定 */
+/* body要素の色変更 */
+.box1 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background: pink;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+
+.box2 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background: orange;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+.box3 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background: orchid;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+.box4 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background: tomato;
+  cursor: pointer; 
+  padding-top: 5px; 
+  border-radius: 5%;
+}
+
+.box5 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background: skyblue;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+
+.box6 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background: wheat;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+
+.box7 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background: forestgreen;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+.box8 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background:  coral;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+.box9 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background: lightblue;
+  cursor: pointer; 
+  padding-top: 5px; 
+  border-radius: 5%;
+}
+
+.box10 {
+  margin: auto;
+  margin-top: 20px;
+  width: 136px;
+  height: 30px;
+  background:  greenyellow;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+
+/* header フレックスボックス指定 */
+/* ヘッダー要素の背景変更 */
+.box11 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: pink;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+
+.box12 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: orange;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+.box13 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: orchid;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+.box14 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: tomato;
+  cursor: pointer; 
+  padding-top: 5px; 
+  border-radius: 5%;
+}
+
+.box15 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: skyblue;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+.box16 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: wheat;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+
+.box17 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: forestgreen;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+.box18 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: coral;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+.box19 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background:  lightblue;
+  cursor: pointer; 
+  padding-top: 5px; 
+  border-radius: 5%;
+}
+
+.box20 {
+  margin: auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  background: greenyellow;
+  cursor: pointer;  
+  padding-top: 5px;
+  border-radius: 5%;
+}
+
